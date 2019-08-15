@@ -20,6 +20,7 @@ class JsonNotebookExporter(TemplateExporter):
     def formatCellContent(self, context, source):
         return (
             source
+                .replace('\\', '\\\\')
                 .replace('\n', '\\n')
                 .replace('"', '\\"')
         )
