@@ -33,6 +33,6 @@ setuptools.setup(
         'nbconvert',
         'ipython',
     ],
-    version='0.2.1',
+    version='0.2.2',
     script_args=['bdist_wheel'],
 )

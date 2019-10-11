@@ -2,6 +2,7 @@ import os
 import os.path
 from jinja2 import contextfilter
 from nbconvert.exporters.templateexporter import TemplateExporter
+from DbxNotebookExporter.Json.formatCellContent import formatCellContent
 
 class JsonNotebookExporter(TemplateExporter):
     export_from_notebook = 'Databricks JSON Notebook'
@@ -18,12 +19,7 @@ class JsonNotebookExporter(TemplateExporter):
 
     @contextfilter
     def formatCellContent(self, context, source):
-        return (
-            source
-                .replace('\\', '\\\\')
-                .replace('\n', '\\n')
-                .replace('"', '\\"')
-        )
+        return formatCellContent(source)
 
     def default_filters(self):
         yield ('formatCellContent', self.formatCellContent)
