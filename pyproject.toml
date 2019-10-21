@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "dbx-notebook-exporter"
+version = "0.2.3"
+description = "Databrics Notebook Exporter"
+readme = "README.md"
+repository = "https://github.com/DataSentics/dbx-notebook-exporter"
+
+license = "MIT"
+
+authors = [
+    "Jiri Koutny <jiri.koutny@datasentics.com>"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+include = ["*.tpl"]
+
+packages = [
+    { include = "DbxNotebookExporter", from = "src" },
+]
+
+[tool.poetry.plugins."nbconvert.exporters"]
+"dbx-python-notebook" = "DbxNotebookExporter.Python.PythonNotebookExporter:PythonNotebookExporter"
+"dbx-json-notebook" = "DbxNotebookExporter.Json.JsonNotebookExporter:JsonNotebookExporter"
+
+[tool.poetry.dependencies]
+python = "~3.5.6"
+nbconvert = "~5"
+ipython = "~7"
