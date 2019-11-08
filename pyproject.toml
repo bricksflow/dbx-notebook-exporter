@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dbx-notebook-exporter"
-version = "0.2.5"
+version = "0.2.6"
 description = "Databrics Notebook Exporter"
 readme = "README.md"
 repository = "https://github.com/DataSentics/dbx-notebook-exporter"
