@@ -20,12 +20,12 @@ classifiers = [
 include = ["*.tpl"]
 
 packages = [
-    { include = "DbxNotebookExporter", from = "src" },
+    { include = "dbxnotebookexporter", from = "src" },
 ]
 
 [tool.poetry.plugins."nbconvert.exporters"]
-"dbx-python-notebook" = "DbxNotebookExporter.Python.PythonNotebookExporter:PythonNotebookExporter"
-"dbx-json-notebook" = "DbxNotebookExporter.Json.JsonNotebookExporter:JsonNotebookExporter"
+"dbx-python-notebook" = "dbxnotebookexporter.python.PythonNotebookExporter:PythonNotebookExporter"
+"dbx-json-notebook" = "dbxnotebookexporter.json.JsonNotebookExporter:JsonNotebookExporter"
 
 [tool.poetry.dependencies]
 python = ">=3.5.2"

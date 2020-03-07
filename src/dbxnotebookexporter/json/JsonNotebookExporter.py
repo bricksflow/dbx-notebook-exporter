@@ -2,10 +2,10 @@ import os
 import os.path
 from jinja2 import contextfilter
 from nbconvert.exporters.templateexporter import TemplateExporter
-from DbxNotebookExporter.Json.formatCellContent import formatCellContent
+from dbxnotebookexporter.json.formatCellContent import formatCellContent
 
 class JsonNotebookExporter(TemplateExporter):
-    export_from_notebook = 'Databricks JSON Notebook'
+    export_from_notebook = 'databricks JSON Notebook'
 
     def _file_extension_default(self):
         return '.python'

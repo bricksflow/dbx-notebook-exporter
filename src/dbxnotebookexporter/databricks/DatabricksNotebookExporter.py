@@ -4,7 +4,7 @@ import os.path
 from nbconvert.exporters.templateexporter import TemplateExporter
 
 class DatabricksNotebookExporter(TemplateExporter):
-    export_from_notebook = 'Databricks Python Notebook'
+    export_from_notebook = 'databricks Python Notebook'
 
     def _file_extension_default(self):
         return '.py'
