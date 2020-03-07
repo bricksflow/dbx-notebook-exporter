@@ -3,5 +3,6 @@ def formatCellContent(source):
         source
             .replace('\\', '\\\\')
             .replace('\n', '\\n')
+            .replace('\t', '\\t')
             .replace('"', '\\"')
     )
