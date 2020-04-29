@@ -3,7 +3,7 @@ name = "dbx-notebook-exporter"
 version = "0.4.0"
 description = "Databrics Notebook Exporter"
 readme = "README.md"
-repository = "https://github.com/DataSentics/dbx-notebook-exporter"
+repository = "https://github.com/bricksflow/dbx-notebook-exporter"
 
 license = "MIT"
 
