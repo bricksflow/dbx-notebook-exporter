@@ -29,5 +29,5 @@ packages = [
 
 [tool.poetry.dependencies]
 python = ">=3.5.2"
-nbconvert = "~5"
-ipython = "~7"
+nbconvert = ">=5.6"
+ipython = ">=7.8"
